@@ -45,4 +45,5 @@ Plug your local USB eReader to a remote Calibre instance
 - TODO addon to auto put books in kobo based on criterias
 - TODO install cron for import script
 - TODO start stop docker to avoid any ambiguity
+- TODO rsync should not be possible if calibre is alive
 
