@@ -5,7 +5,7 @@ Plug your local USB eReader to a remote Calibre instance
 - A Linux client PC (windows version maybe later)
 - create the "kobo-rsync" folder somewhere in the NAS (owned by SSH user in RW)
 - A Linux server with https://hub.docker.com/r/linuxserver/calibre with PUID and GUID configured with the SSH user and
-  - in docker compose on run, add the mount from the kobo-rsync folder to /mnt/kobo (calibre will see it)
+  - in docker compose on run, add the mount from the `../kobo-rsync` folder to `/mnt/kobo` (calibre will see it)
 - rsync on Laptop and NAS
 - create a custom field named "collec"
 
@@ -18,7 +18,7 @@ Plug your local USB eReader to a remote Calibre instance
 ## Files
 `open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
 
-when Calibre is open, use the connect to folder itme and choose 
+when Calibre is open, use the connect to folder itme and choose `/mnt/kobo` + the kobo that is emulated
 
 `unmount-calibre.sh` to start the downstream sync (Calibre to eReader and unmount the USB eReader)
 
