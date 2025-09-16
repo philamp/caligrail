@@ -20,15 +20,19 @@ Plug your local USB eReader to a remote Calibre instance
 - use https://hub.docker.com/r/linuxserver/calibre with PUID and GUID configured with the SSH user that will use the scripts
   - in docker compose on run, add the mount from the `../kobo-rsync` folder to `/mnt/kobo` (calibre will see it)
 
-`open-calibre.env` to put settings
+- `open-calibre.env` to put settings
 
-`open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
+- `chmod +x *.sh`to be able to run the scripts
 
-when Calibre is open, use the connect to folder itme and choose `/mnt/kobo` + the kobo that is emulated
+- (ubuntu) right click on .desktop files "allow launching"
 
-`unmount-calibre.sh` to start the downstream sync (Calibre to eReader and unmount the USB eReader)
+- `open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
 
-`chmod +x *.sh`to be able to run the scripts
+- when Calibre is open, use the connect to folder itme and choose `/mnt/kobo` + the kobo that is emulated
+
+- `unmount-calibre.sh` to start the downstream sync (Calibre to eReader and unmount the USB eReader)
+
+
 
 - create a custom field named "collec"
 
