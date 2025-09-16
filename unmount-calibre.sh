@@ -4,6 +4,8 @@
 cd "$(dirname "$0")"
 . open-calibre.env
 
+
+
 # === Fonctions ===
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"
@@ -13,6 +15,7 @@ log() {
 if mountpoint -q "$DEVICE_MOUNT"; then
     if [ -d "$DEVICE_MOUNT/.kobo" ]; then
         log "✅ Kobo détectée sur $DEVICE_MOUNT"
+        DEV=$(findmnt -no SOURCE --target "$DEVICE_MOUNT")
     else
         log "⚠️ Kobo montée mais répertoire .kobo manquant"
         exit 1
@@ -36,7 +39,8 @@ fi
 
 # === Démonter la Kobo proprement ===
 log "💾 Déconnexion de la Kobo..."
-umount "$DEVICE_MOUNT"
+udisksctl unmount -b "$DEV"
+udisksctl power-off -b "$DEV"
 if [ $? -eq 0 ]; then
     log "✅ Kobo démontée."
 else
