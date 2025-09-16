@@ -47,7 +47,9 @@ with open(log_file, 'a', encoding='utf-8') as log:
 
                 print(f'→ Ajout : {full_path}')
 
-                folder_name = os.path.basename(os.path.dirname(full_path))
+                rel_path = os.path.relpath(full_path, import_folder)
+                parts = rel_path.split(os.sep)
+                folder_name = parts[0] if len(parts) > 1 else ""
                 collection_name = normalize_folder_name(folder_name)
 
                 # 🔍 Extraction des métadonnées
@@ -69,7 +71,8 @@ with open(log_file, 'a', encoding='utf-8') as log:
 
                 # 🏷️ Appliquer la valeur dans le champ personnalisé
                 try:
-                    library.set_field(custom_field, {book_id: collection_name})
+                    if folder_name != "":
+                        library.set_field(custom_field, {book_id: collection_name})
                     print(f"✅ '{filename}' ajouté avec collec = '{collection_name}'")
                 except KeyError:
                     print(f"❌ Erreur : champ personnalisé '{custom_field}' introuvable dans la base.")
