@@ -46,4 +46,5 @@ Plug your local USB eReader to a remote Calibre instance
 - TODO install cron for import script
 - TODO start stop docker to avoid any ambiguity
 - TODO rsync should not be possible if calibre is alive
+- permissions upstream downstream 
 
