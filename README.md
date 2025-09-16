@@ -5,6 +5,8 @@ Plug your local USB eReader to a remote Calibre instance
 - A linux laptop (windows version maybe later)
 - A NAS with https://hub.docker.com/r/linuxserver/calibre with PUID and GUID configured with the SSH user
 - rsync on Laptop and NAS
+- create the "kobo-rsync" folder some where in the NAS (owned by SSH user in RW)
+- in docker compose on run, add the mount from the kobo-rsync folder to /mnt/kobo (calibre will see it)
 
 > [!TIP]
 > You can generate a SSH key pair with `ssh-keygen -t ed25519 -C "uremail@exemple.com" -f ~/.ssh/yourkey`
