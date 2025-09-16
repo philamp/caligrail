@@ -10,7 +10,7 @@ TARGET_DIR="/srv/dev-disk-by-uuid-f3638c32-4075-40dc-b4e9-abb2d19be252/backups/k
 CALIBRE_URL="https://172.22.2.222:8181/" # change it for your calibre linuxserver URL
 
 SSH_USER="helene"
-SSH_HOST="172.22.2.222"
+SSH_HOST="OMV-HELENE" #real hostname or host defined in ssh client config (/.ssh/config)
 
 # === Fonctions ===
 log() {
