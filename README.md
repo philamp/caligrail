@@ -39,10 +39,10 @@ Plug your local USB eReader to a remote Calibre instance
 - use import.py -> use it with `calibre-debug -e` inside the container (TODO)
 
 
-## Bonuses
+## TODOs
 
-### configure Kobotouch to create Collections
+- TODO configure an automatic collection in kobotouch ...
+- TODO addon to auto put books in kobo based on criterias
+- TODO install cron for import script
+- TODO start stop docker to avoid any ambiguity
 
-- configure an automatic collection in kobotouch ...
-
-### Configure readlist addon to automatically sync based on criterias
