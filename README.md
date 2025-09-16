@@ -1,4 +1,4 @@
-# caligrail
+# caligrail for kobo
 Plug your local USB eReader to a remote Calibre instance
 
 ## Prerequisites
@@ -7,6 +7,8 @@ Plug your local USB eReader to a remote Calibre instance
 - rsync on Laptop and NAS
 - create the "kobo-rsync" folder somewhere in the NAS (owned by SSH user in RW)
 - in docker compose on run, add the mount from the kobo-rsync folder to /mnt/kobo (calibre will see it)
+- create a custom field named "collec"
+- configure an automatic collection in kobotouch
 
 > [!TIP]
 > You can generate a SSH key pair with `ssh-keygen -t ed25519 -C "uremail@exemple.com" -f ~/.ssh/yourkey`
