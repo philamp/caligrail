@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Open Calibre
+Exec=gnome-terminal -- bash -c "/home/philippe/Desktop/open-calibre.sh; exec bash"
+Icon=utilities-terminal
+Terminal=false
+Type=Application
