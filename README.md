@@ -3,8 +3,14 @@ Plug your local USB eReader to a remote Calibre instance
 
 ## Prerequisites
 - A linux laptop (windows version maybe later)
-- A NAS with https://hub.docker.com/r/linuxserver/calibre with PUID and GUID configured with of SSH user
+- A NAS with https://hub.docker.com/r/linuxserver/calibre with PUID and GUID configured with the SSH user
 - rsync on Laptop and NAS
+
+> [!TIP]
+> You can generate a SSH key pair with `ssh-keygen -t ed25519 -C "uremail@exemple.com" -f ~/.ssh/yourkey`
+> - it will generate the private key yourkey and the public one `yourkey.pub`
+> - put the `yourkey.pub` content in authorized_keys of the connecting user (/home/user/.ssh/authorized_keys)
+> - ...and add the user to _ssh or ssh group to allow ssh connection (depends on the OS)
 
 ## Files
 `open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
