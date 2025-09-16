@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Close Calibre
+Exec=gnome-terminal -- bash -c "/home/philippe/Desktop/unmount-calibre.sh; exec bash"
+Icon=utilities-terminal
+Terminal=false
+Type=Application
