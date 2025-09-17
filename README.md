@@ -1,5 +1,12 @@
 # caligrail for kobo
-Plug your local USB eReader to a remote Calibre instance
+Plug your local USB eReader to a remote Calibre instance (not through USB over network but through rsync)
++ automatic sync between a "Shared watched folder" and Calibre library 
+
+This is VERY experimental in its current state
+
+the current workflow is:
+
+user with licence-free EPUBs/PDFs --> put in a SMB/NFS/whatever watched folder --> synced to remote Calibre DB *overnight* --> user plugs Kobo into linux laptop and open remote Calibre (through a bash script) --> user works in Calibre and "send to device" the books he wants --> user close calibre --> user sync to kobo and unmount it (through a bash script)
 
 ## Prerequisites
 - A Linux client PC (windows version maybe later)
@@ -28,25 +35,27 @@ Plug your local USB eReader to a remote Calibre instance
 
 - `open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
 
-- when Calibre is open, use the connect to folder itme and choose `/mnt/kobo` + the kobo that is emulated
+- when Calibre is open, use the *connect to folder icon* and choose `/mnt/kobo` + choose carefully the kobo that should be emulated
 
 - `unmount-calibre.sh` to start the downstream sync (Calibre to eReader and unmount the USB eReader)
 
-
-
 - create a custom field named "collec"
 
-- use import.py -> use it with `calibre-debug -e` inside the container (TODO)
+- use import.py -> use it with `calibre-debug -e` inside the container (TODO nice install)
 
 
 ## TODOs
 
-- TODO configure an automatic collection in kobotouch ...
-- TODO addon to auto put books in kobo based on criterias
+- TODO explain how to configure an automatic collection in kobotouch
 - TODO install cron for import script
 - TODO start stop docker to avoid any ambiguity
 - TODO rsync should not be possible if calibre is alive
-  - force user to close calibre in order to sync back ??
-- TODO to start, loop until it's mounted
-- permissions upstream downstream 
+  - force stop container before syncing to NAS
+  - restart container after syncing to NAS
+  - force user to close calibre in order to sync back to Kobo ??
+- TODO start, loop while until eReader is mounted
+- permissions upstream downstream check (should be same user as SSH that writes in NAS folder comgin from calibre docker or ssh rsync)
 
+optional:
+
+- TODO is there an addon to auto put books in kobo based on criterias ?
