@@ -1,4 +1,4 @@
-# Caligrail for kobo
+# Caligrail for Kobo eReaders
 - Plug your local USB eReader to a remote VNC Calibre instance (not through USB over network but through rsync)
 - and automatic sync between a "Shared watched folder" and Calibre library 
 
