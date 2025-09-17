@@ -15,8 +15,8 @@ This is VERY experimental in its current state
 
 ## Prerequisites
 - A Linux client PC (windows version maybe later)
-- A Linux server w
-- rsync on Laptop and NAS
+- A Linux server (NAS)
+- rsync on Laptop and Linux server
 
 
 > [!TIP]
