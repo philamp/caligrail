@@ -36,7 +36,7 @@ This is VERY experimental in its current state
 
 - `chmod +x *.sh`to be able to run the scripts
 
-- (ubuntu) right click on .desktop files "allow launching"
+- (ubuntu) right click on .desktop files "allow launching" if you want to use desktop shortcuts
 
 - `open-calibre.sh` to start the upstream sync (eReader to Calibre and start the web browser to open Calibre)
 
