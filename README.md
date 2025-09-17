@@ -1,12 +1,17 @@
-# caligrail for kobo
-Plug your local USB eReader to a remote Calibre instance (not through USB over network but through rsync)
-+ automatic sync between a "Shared watched folder" and Calibre library 
+# Caligrail for kobo
+- Plug your local USB eReader to a remote VNC Calibre instance (not through USB over network but through rsync)
+- and automatic sync between a "Shared watched folder" and Calibre library 
 
 This is VERY experimental in its current state
 
-the current workflow is:
+## The current workflow is:
 
-user with licence-free EPUBs/PDFs --> put in a SMB/NFS/whatever watched folder --> synced to remote Calibre DB *overnight* --> user plugs Kobo into linux laptop and open remote Calibre (through a bash script) --> user works in Calibre and "send to device" the books he wants --> user close calibre --> user sync to kobo and unmount it (through a bash script)
+- user puts (licence free) ebook files in a SMB/NFS/whatever watched folder 
+- files synced to remote Calibre DB *overnight* 
+- (initiated by a bash script) user plugs Kobo into linux laptop and open remote Calibre through VNC session in its browser
+- user works in Calibre and "send to device" the books he wants 
+- user closes calibre 
+- (initiated by a bash script) user syncs to kobo and unmount it
 
 ## Prerequisites
 - A Linux client PC (windows version maybe later)
