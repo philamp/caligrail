@@ -23,7 +23,7 @@ fi
 
 # === Rsync ===
 log "🚀 Starting rsync to Calibre $SSH_USER@$SSH_HOST:$TARGET_DIR ..."
-rsync -avh --progress --delete -e ssh "$DEVICE_MOUNT"/ "$SSH_USER@$SSH_HOST:$TARGET_DIR"/
+rsync -rtvh --progress --delete -e ssh "$DEVICE_MOUNT"/ "$SSH_USER@$SSH_HOST:$TARGET_DIR"/
 STATUS=$?
 
 if [ $STATUS -eq 0 ]; then
