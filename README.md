@@ -44,7 +44,7 @@ This is VERY experimental in its current state
 
 - `unmount-calibre.sh` to start the downstream sync (Calibre to eReader and unmount the USB eReader)
 
-- create a custom field named "collec"
+- create a custom field named "collec" and configure kobotouch to use it to create collections in the Kobo db
 
 - use import.py -> use it with `calibre-debug -e` inside the container (TODO nice install)
 
