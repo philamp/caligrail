@@ -59,6 +59,7 @@ with open(log_file, 'a', encoding='utf-8') as log:
                 with open(full_path, 'rb') as f:
                     mi = get_metadata(f, file_ext)
                 mi.timestamp = now()
+                mi.isbn = None
 
                 # ➕ Ajout du livre
                 ids, duplicates = library.add_books([(mi, {format_key: full_path})])
