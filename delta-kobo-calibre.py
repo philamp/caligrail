@@ -21,7 +21,7 @@ cur = con_kobo.cursor()
 cur.execute("""
     SELECT Title
     FROM content
-    WHERE BookID IS NULL AND (Series IS NULL OR lower(Series) != 'bandes-dessinées' OR lower(Series) != 'a-trier' OR lower(Series) != 'beaux-livres' OR lower(Series) != 'cusine')
+    WHERE BookID IS NULL AND (Series IS NULL OR (lower(Series) != 'bandes-dessinées' AND lower(Series) != 'a-trier' AND lower(Series) != 'beaux-livres' AND lower(Series) != 'cusine'))
 """)
 kobo_titles = {title.strip().lower() for (title,) in cur.fetchall() if title}
 
