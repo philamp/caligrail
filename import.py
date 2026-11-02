@@ -1,4 +1,3 @@
-```python
 import os
 import re
 from datetime import datetime
@@ -165,4 +164,3 @@ with open(log_file, 'a', encoding='utf-8') as log:
             # 📝 Ajout immédiat dans le fichier de log
             log.write(full_path + '\n')
             log.flush()
-```
