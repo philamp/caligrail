@@ -1,3 +1,6 @@
+> [!WARNING]
+> This project is deprecated since https://github.com/crocodilestick/Calibre-Web-Automated is just way better for the aimed task
+
 # Caligrail for Kobo eReaders
 - Plug your local USB eReader to a remote VNC Calibre instance (not through USB over network but through rsync)
 - and automatic sync between a "Shared watched folder" and Calibre library 
